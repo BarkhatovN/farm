@@ -1,0 +1,11 @@
+<h1 mat-dialog-title>New Animal</h1>
+<div mat-dialog-content>
+  <mat-form-field>
+    <mat-label>Name</mat-label>
+    <input matInput [formControl]="animalName">
+  </mat-form-field>
+</div>
+<div mat-dialog-actions class="container">
+  <button mat-button (click)="onCreate()" [disabled]="animalName.invalid">Create</button>
+  <button mat-button (click)="onCancel()">Cancel</button>
+</div>
